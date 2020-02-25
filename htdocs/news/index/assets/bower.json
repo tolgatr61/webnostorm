@@ -1,0 +1,41 @@
+{
+    "name": "GoodGames",
+    "version": "1.0.0",
+    "authors": [
+        "nK"
+    ],
+    "description": "Premium HTML Template",
+    "license": "Envato REGULAR LICENSE",
+    "homepage": "https://nkdev.info",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "jquery": "~3.1.1",
+        "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.6",
+        "tether": "~1.4.0",
+        "seiyria-bootstrap-slider": "~9.7.2",
+        "gsap": "~1.19.1",
+        "font-awesome": "~4.7.0",
+        "ionicons": "~2.0.1",
+        "sticky-kit": "git://github.com/leafo/sticky-kit#master",
+        "jarallax": "~1.7.3",
+        "imagesloaded": "~4.1.1",
+        "flickity": "~2.0.5",
+        "photoswipe": "~4.1.1",
+        "jquery-validation": "~1.16.0",
+        "jquery-form": "~4.0.1",
+        "jquery.countdown": "~2.2.0",
+        "moment": "~2.17.1",
+        "moment-timezone": "~0.5.11",
+        "SoundManager2": "git://github.com/scottschiller/SoundManager2.git#master",
+        "hammer.js": "~2.0.8",
+        "nanoscroller": "~0.8.7",
+        "keymaster": "~1.6.3",
+        "prism": "~1.6.0",
+        "summernote": "~0.8.2"
+    }
+}

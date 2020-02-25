@@ -1,0 +1,13 @@
+RewriteEngine on
+RewriteCond %{HTTPS} on
+
+RewriteCond %{HTTP_HOST} ^(www.)?axetrix.com$
+RewriteCond %{REQUEST_URI} !^/news/index/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /news/index/$1
+RewriteRule ^profile/(.*) /news/index/profile.php?username=$1
+
+RewriteRule ^profile(|/)$ /news/index/profile.php
+RewriteRule ^user/configuration(|/)$ /news/index/settings.php
+RewriteRule ^index(|/)$ /news/index/

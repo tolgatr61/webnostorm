@@ -1,0 +1,2 @@
+
+jQuery.fn.topLink=function(a){a=jQuery.extend({min:1,fadeSpeed:200},a);return this.each(function(){var b=$(this);b.hide();$(window).scroll(function(){if($(window).scrollTop()>=a.min){b.fadeIn(a.fadeSpeed)}else{b.fadeOut(a.fadeSpeed)}})})};$(document).ready(function(){$("#top-link").topLink({min:400,fadeSpeed:500});$("#top-link").click(function(a){a.preventDefault();$.scrollTo(0,300)})});

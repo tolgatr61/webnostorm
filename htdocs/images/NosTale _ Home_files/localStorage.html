@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://account.gameforge.com/partials/localStorage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <script>
+            (function() {
+                return init();
+
+                function init() {
+                    if (window.addEventListener) {
+                        window.addEventListener('message', receiveMessage, false);
+                    } else {
+                        window.attachEvent('onmessage', receiveMessage);
+                    }
+
+                    sendMessage('init');
+                }
+
+                function sendMessage(data) {
+                    window.parent.postMessage(JSON.stringify(data), '*');
+                }
+
+                function receiveMessage(message) {
+                    if (!message.source === window.parent) {
+                        return;
+                    }
+
+                    var payload = JSON.parse(message.data), response = {
+                        id: payload.id
+                    };
+
+                    try {
+                        response.returnValue = window.localStorage[payload.cmd].apply(localStorage, payload.args);
+                    } catch (e) {
+                        response.error = e;
+                    }
+
+                    sendMessage(response);
+                }
+            })();
+        </script>
+    </head>
+<body>
+</body></html>
